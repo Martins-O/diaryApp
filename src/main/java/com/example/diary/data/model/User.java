@@ -48,15 +48,15 @@ public class User {
      @Column(
             name = "email",
             nullable = false,
-            columnDefinition = "TEXT",
-              unique = true
+            columnDefinition = "TEXT"
     )
     private String email;
     private String password;
     @Column(
             name = "username",
             nullable = false,
-            columnDefinition = "TEXT"
+            columnDefinition = "TEXT",
+            unique = true
     )
     private String username;
     private String conPassword;

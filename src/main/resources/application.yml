@@ -11,7 +11,19 @@ spring:
       ddl-auto: create
 
     show-sql: true
-
+#spring:
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/test_db
+#    username: journalese
+#    password: ThePassword
+#    driver-class-name: com.mysql.jdbc.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#
+#    database-platform: org.hibernate.dialect.mysql5.MySQL5DatabasePlatform
+#    show-sql: true
 
 
 server:

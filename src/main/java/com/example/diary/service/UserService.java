@@ -10,19 +10,22 @@ import com.example.diary.dto.response.DiaryResponse;
 import com.example.diary.dto.response.LoginResponse;
 import com.example.diary.dto.response.UpdateUserResponse;
 import com.example.diary.exception.PasswordMisMatchException;
+import com.example.diary.exception.UserException;
 import com.example.diary.exception.UserNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 @Service
 public interface UserService {
 
-    DiaryResponse createUser(CreateUserRequest request) throws PasswordMisMatchException;
+    DiaryResponse createUser(CreateUserRequest request) throws UserException;
     LoginResponse login (LoginRequest request) throws UserNotFoundException;
     UpdateUserResponse updateUser (UpdateUserRequest request) throws UserNotFoundException;
 
     Optional<User> findEntry(String id);
 
     DeleteUserResponse deleteUser(DeleteUserRequest request) throws PasswordMisMatchException;
+    public List<User> getRepo();
 
 }
